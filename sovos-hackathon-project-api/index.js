@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from "express";
 import fileUpload from "express-fileupload";
 import { ContractModel } from "./contractModel.js";
@@ -6,6 +7,7 @@ import { parseInvoiceFromXmlFile } from "./utils.js";
 const app = express();
 app.use(express.json());
 app.use(fileUpload());
+app.use(cors());
 
 app.get("/", (req, res) => {
 	return res.json({ message: "Team 8 API is online." });
