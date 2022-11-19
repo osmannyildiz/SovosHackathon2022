@@ -1,7 +1,10 @@
 import { useEffect } from "react";
+import { useMainContext } from "../contexts/mainContext";
 import "./LoginPage.css";
 
 export default function LoginPage() {
+	const mainCtx = useMainContext();
+
 	useEffect(() => {
 		const sign_in_btn = document.querySelector("#sign-in-btn");
 		const sign_up_btn = document.querySelector("#contact-us-btn");
@@ -21,7 +24,7 @@ export default function LoginPage() {
 			<div className="container">
 				<div className="forms-container">
 					<div className="signin-signup">
-						<form action="/main.html" className="sign-in-form">
+						<div className="sign-in-form">
 							<h2 className="title">Sign in</h2>
 							<div className="input-field">
 								<i className="fas fa-user"></i>
@@ -31,8 +34,13 @@ export default function LoginPage() {
 								<i className="fas fa-lock"></i>
 								<input type="password" placeholder="Password" />
 							</div>
-							<input type="submit" value="Login" className="btn solid" />
-						</form>
+							<input
+								type="button"
+								value="Login"
+								className="btn solid"
+								onClick={() => mainCtx.setCurrentPage("dashboard")}
+							/>
+						</div>
 						<form action="/success.html" className="contact-us">
 							<h2 className="title">Contact us</h2>
 							<div className="input-field">

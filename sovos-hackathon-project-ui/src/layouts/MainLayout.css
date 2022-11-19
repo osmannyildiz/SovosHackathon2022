@@ -139,3 +139,7 @@ button:focus {
 .nav-link {
 	cursor: pointer;
 }
+
+.main-layout {
+	padding-top: 30px;
+}

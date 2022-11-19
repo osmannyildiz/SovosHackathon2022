@@ -1,25 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
-* {
+.login-page * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-body,
-input {
+.login-page body,
+.login-page input {
 	font-family: "Poppins", sans-serif;
 }
 
-.container {
+.login-page .container {
 	position: relative;
 	width: 100%;
 	background-color: #fff;
 	min-height: 100vh;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
-.forms-container {
+.login-page .forms-container {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -27,7 +27,7 @@ input {
 	left: 0;
 }
 
-.signin-signup {
+.login-page .signin-signup {
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -39,7 +39,8 @@ input {
 	z-index: 5;
 }
 
-form {
+.login-page form,
+.login-page .sign-in-form {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -51,22 +52,22 @@ form {
 	grid-row: 1 / 2;
 }
 
-form.contact-us {
+.login-page form.contact-us {
 	opacity: 0;
 	z-index: 1;
 }
 
-form.sign-in-form {
+.login-page .sign-in-form {
 	z-index: 2;
 }
 
-.title {
+.login-page .title {
 	font-size: 2.2rem;
 	color: #444;
 	margin-bottom: 10px;
 }
 
-.input-field {
+.login-page .input-field {
 	max-width: 380px;
 	width: 100%;
 	background-color: #f0f0f0;
@@ -79,7 +80,7 @@ form.sign-in-form {
 	position: relative;
 }
 
-.input-field i {
+.login-page .input-field i {
 	text-align: center;
 	line-height: 55px;
 	color: #acacac;
@@ -87,7 +88,7 @@ form.sign-in-form {
 	font-size: 1.1rem;
 }
 
-.input-field input {
+.login-page .input-field input {
 	background: none;
 	outline: none;
 	border: none;
@@ -97,12 +98,12 @@ form.sign-in-form {
 	color: #333;
 }
 
-.input-field input::placeholder {
+.login-page .input-field input::placeholder {
 	color: #aaa;
 	font-weight: 500;
 }
 
-.btn {
+.login-page .btn {
 	width: 150px;
 	background-color: #6c94db;
 	border: none;
@@ -117,11 +118,12 @@ form.sign-in-form {
 	transition: 0.5s;
 }
 
-.btn:hover {
+.login-page .btn:hover {
 	background-color: #4d75bb;
 	cursor: pointer;
 }
-.panels-container {
+
+.login-page .panels-container {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -131,7 +133,7 @@ form.sign-in-form {
 	grid-template-columns: repeat(2, 1fr);
 }
 
-.container:before {
+.login-page .container:before {
 	content: "";
 	position: absolute;
 	height: 2000px;
@@ -145,13 +147,13 @@ form.sign-in-form {
 	z-index: 6;
 }
 
-.image {
+.login-page .image {
 	width: 100%;
 	transition: transform 1.1s ease-in-out;
 	transition-delay: 0.4s;
 }
 
-.panel {
+.login-page .panel {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -160,34 +162,34 @@ form.sign-in-form {
 	z-index: 6;
 }
 
-.left-panel {
+.login-page .left-panel {
 	pointer-events: all;
 	padding: 3rem 17% 2rem 12%;
 }
 
-.right-panel {
+.login-page .right-panel {
 	pointer-events: none;
 	padding: 3rem 12% 2rem 17%;
 }
 
-.panel .content {
+.login-page .panel .content {
 	color: #fff;
 	transition: transform 0.9s ease-in-out;
 	transition-delay: 0.6s;
 }
 
-.panel h3 {
+.login-page .panel h3 {
 	font-weight: 600;
 	line-height: 1;
 	font-size: 1.5rem;
 }
 
-.panel p {
+.login-page .panel p {
 	font-size: 0.95rem;
 	padding: 0.7rem 0;
 }
 
-.btn.transparent {
+.login-page .btn.transparent {
 	margin: 0;
 	background: none;
 	border: 2px solid #fff;
@@ -197,73 +199,74 @@ form.sign-in-form {
 	font-size: 0.8rem;
 }
 
-.right-panel .image,
-.right-panel .content {
+.login-page .right-panel .image,
+.login-page .right-panel .content {
 	transform: translateX(800px);
 }
 
 /* ANIMATION */
 
-.container.sign-up-mode:before {
+.login-page .container.sign-up-mode:before {
 	transform: translate(100%, -50%);
 	right: 52%;
 }
 
-.container.sign-up-mode .left-panel .image,
-.container.sign-up-mode .left-panel .content {
+.login-page .container.sign-up-mode .left-panel .image,
+.login-page .container.sign-up-mode .left-panel .content {
 	transform: translateX(-800px);
 }
 
-.container.sign-up-mode .signin-signup {
+.login-page .container.sign-up-mode .signin-signup {
 	left: 25%;
 }
 
-.container.sign-up-mode form.contact-us {
+.login-page .container.sign-up-mode form.contact-us {
 	opacity: 1;
 	z-index: 2;
 }
 
-.container.sign-up-mode form.sign-in-form {
+.login-page .container.sign-up-mode .sign-in-form {
 	opacity: 0;
 	z-index: 1;
 }
 
-.container.sign-up-mode .right-panel .image,
-.container.sign-up-mode .right-panel .content {
+.login-page .container.sign-up-mode .right-panel .image,
+.login-page .container.sign-up-mode .right-panel .content {
 	transform: translateX(0%);
 }
 
-.container.sign-up-mode .left-panel {
+.login-page .container.sign-up-mode .left-panel {
 	pointer-events: none;
 }
 
-.container.sign-up-mode .right-panel {
+.login-page .container.sign-up-mode .right-panel {
 	pointer-events: all;
 }
 
 @media (max-width: 870px) {
-	.container {
+	.login-page .container {
 		min-height: 800px;
 		height: 100vh;
 	}
-	.signin-signup {
+
+	.login-page .signin-signup {
 		width: 100%;
 		top: 95%;
 		transform: translate(-50%, -100%);
 		transition: 1s 0.8s ease-in-out;
 	}
 
-	.signin-signup,
-	.container.sign-up-mode .signin-signup {
+	.login-page .signin-signup,
+	.login-page .container.sign-up-mode .signin-signup {
 		left: 50%;
 	}
 
-	.panels-container {
+	.login-page .panels-container {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 2fr 1fr;
 	}
 
-	.panel {
+	.login-page .panel {
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
@@ -271,42 +274,42 @@ form.sign-in-form {
 		grid-column: 1 / 2;
 	}
 
-	.right-panel {
+	.login-page .right-panel {
 		grid-row: 3 / 4;
 	}
 
-	.left-panel {
+	.login-page .left-panel {
 		grid-row: 1 / 2;
 	}
 
-	.image {
+	.login-page .image {
 		width: 200px;
 		transition: transform 0.9s ease-in-out;
 		transition-delay: 0.6s;
 	}
 
-	.panel .content {
+	.login-page .panel .content {
 		padding-right: 15%;
 		transition: transform 0.9s ease-in-out;
 		transition-delay: 0.8s;
 	}
 
-	.panel h3 {
+	.login-page .panel h3 {
 		font-size: 1.2rem;
 	}
 
-	.panel p {
+	.login-page .panel p {
 		font-size: 0.7rem;
 		padding: 0.5rem 0;
 	}
 
-	.btn.transparent {
+	.login-page .btn.transparent {
 		width: 110px;
 		height: 35px;
 		font-size: 0.7rem;
 	}
 
-	.container:before {
+	.login-page .container:before {
 		width: 1500px;
 		height: 1500px;
 		transform: translateX(-50%);
@@ -317,54 +320,54 @@ form.sign-in-form {
 		transition: 2s ease-in-out;
 	}
 
-	.container.sign-up-mode:before {
+	.login-page .container.sign-up-mode:before {
 		transform: translate(-50%, 100%);
 		bottom: 32%;
 		right: initial;
 	}
 
-	.container.sign-up-mode .left-panel .image,
-	.container.sign-up-mode .left-panel .content {
+	.login-page .container.sign-up-mode .left-panel .image,
+	.login-page .container.sign-up-mode .left-panel .content {
 		transform: translateY(-300px);
 	}
 
-	.container.sign-up-mode .right-panel .image,
-	.container.sign-up-mode .right-panel .content {
+	.login-page .container.sign-up-mode .right-panel .image,
+	.login-page .container.sign-up-mode .right-panel .content {
 		transform: translateY(0px);
 	}
 
-	.right-panel .image,
-	.right-panel .content {
+	.login-page .right-panel .image,
+	.login-page .right-panel .content {
 		transform: translateY(300px);
 	}
 
-	.container.sign-up-mode .signin-signup {
+	.login-page .container.sign-up-mode .signin-signup {
 		top: 5%;
 		transform: translate(-50%, 0);
 	}
 }
 
 @media (max-width: 570px) {
-	form {
+	.login-page form {
 		padding: 0 1.5rem;
 	}
 
-	.image {
+	.login-page .image {
 		display: none;
 	}
-	.panel .content {
+	.login-page .panel .content {
 		padding: 0.5rem 1rem;
 	}
-	.container {
+	.login-page .container {
 		padding: 1.5rem;
 	}
 
-	.container:before {
+	.login-page .container:before {
 		bottom: 72%;
 		left: 50%;
 	}
 
-	.container.sign-up-mode:before {
+	.login-page .container.sign-up-mode:before {
 		bottom: 28%;
 		left: 50%;
 	}
