@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://img.icons8.com/ios/512/home-page.png" />
+    <title>Home | Team 8</title>
+</head>
+
+<body>
+    <!--Navbar start-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="main.html">
+                <img src="brand.png" alt="icon" id="brand-icon"> Team-8</a>
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse"
+                data-target="#exCollapsingNavbar">
+                &#9776;
+            </button>
+            <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a href="main.html" class="nav-link">Dashboard</a></li>
+                    <li class="nav-item"><a href="invoice.html" class="nav-link">Invoices</a></li>
+                    <li class="nav-item"><a href="add-invoice.html" class="nav-link">Add Invoice</a></li>
+                </ul>
+                <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+                    <li class="dropdown order-1">
+                        <button type="button" id="dropdownMenu1" data-toggle="dropdown"
+                            class="btn btn-outline-secondary bg-secondary dropdown-toggle black"><img
+                                src="https://img.icons8.com/material-two-tone/512/user.png" alt="user" id="user"><span
+                                id="profile">Profile</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right mt-1">
+                            <a class="dropdown-item" href="settings.html">
+                                <img src="https://img.icons8.com/sf-black/512/gear.png" alt="Settings"
+                                    class="icon-settings">
+                                Settings
+                            </a>
+                            <a class="dropdown-item" href="login-page-v1/index.html">
+                                <img src="https://img.icons8.com/ios-filled/512/logout-rounded.png" alt="Logout"
+                                    class="icon-logout margin-right">
+                                Logout
+                            </a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+    <!-- Main content start -->
+    <main class="container" id="main-container">
+        <section class="header">
+            <h2>Dashboard</h2>
+            <hr>
+        </section>
+        <div class="shadow-lg rounded-lg overflow-hidden">
+            <canvas class="p-5" id="chartRadar"></canvas>
+        </div>
+
+
+
+
+    </main>
+
+
+
+    <!-- Main content end -->
+    <!-- Footer Start-->
+    <footer>
+        <div class="footer-main bg-secondary mt-3">
+            Sovos Hackathon - TEAM 8
+        </div>
+    </footer>
+    <!-- Footer End-->
+
+    <!-- Chart radar -->
+    <script src=" https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+    <script>
+        const dataRadar = {
+            labels: [
+                "lorem",
+                "ipsum",
+                "dolor",
+                "sit",
+                "amet",
+                "consectetur",
+                "adipisicing",
+            ],
+            datasets: [
+                {
+                    label: "Payable Amount",
+                    data: [65, 59, 90, 81, 56, 55, 40],
+                    fill: true,
+                    backgroundColor: "rgba(133, 105, 241, 0.2)",
+                    borderColor: "rgb(133, 105, 241)",
+                    pointBackgroundColor: "rgb(133, 105, 241)",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgb(133, 105, 241)",
+                },
+                {
+                    label: "Total Invoice",
+                    data: [28, 48, 40, 19, 96, 27, 100],
+                    fill: true,
+                    backgroundColor: "rgba(54, 162, 235, 0.2)",
+                    borderColor: "rgb(54, 162, 235)",
+                    pointBackgroundColor: "rgb(54, 162, 235)",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgb(54, 162, 235)",
+                },
+            ],
+        };
+
+        const configRadarChart = {
+            type: "radar",
+            data: dataRadar,
+            options: {},
+        };
+
+        var chartBar = new Chart(
+            document.getElementById("chartRadar"),
+            configRadarChart
+        );
+    </script>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Required chart.js -->
+    <script src="path/to/chartjs/dist/chart.umd.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
